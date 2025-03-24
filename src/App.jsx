@@ -10,13 +10,16 @@ function App() {
   }
 
   return (
-    <div className="min-h-screen bg-gray-50 flex flex-col items-center p-4 sm:p-6">
-      <div className="w-full max-w-md">
-        <h1 className="text-3xl font-bold text-center text-indigo-600 mb-8">Join Meeting</h1>
+    <div className="min-h-screen bg-gradient-to-b from-indigo-50 to-white flex flex-col justify-center items-center p-6">
+      <div className="w-full max-w-sm mx-auto">
+        <div className="text-center mb-8">
+          <h1 className="text-3xl font-bold text-indigo-600">Join Meeting</h1>
+          <p className="text-gray-500 mt-2">Enter a meeting name to connect</p>
+        </div>
         
-        <div className="bg-white rounded-lg shadow-md p-6">
-          <div className="mb-4">
-            <label htmlFor="meetingName" className="block text-sm font-medium text-gray-700 mb-1">
+        <div className="bg-white rounded-xl shadow-lg p-6 mb-8">
+          <div className="mb-5">
+            <label htmlFor="meetingName" className="block text-sm font-medium text-gray-700 mb-2">
               Meeting Name
             </label>
             <input 
@@ -25,12 +28,12 @@ function App() {
               value={meetingName} 
               onChange={(e) => setMeetingName(e.target.value)} 
               placeholder="Enter meeting name"
-              className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500"
+              className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 text-gray-800"
             />
           </div>
           
           <button 
-            className="w-full bg-indigo-600 text-white py-2 px-4 rounded-md hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 transition-colors font-medium"
+            className="w-full bg-indigo-600 text-white py-3 px-4 rounded-lg hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 transition-colors font-medium text-lg"
             onClick={handleJoinMeeting}
           >
             Join Now
@@ -38,9 +41,13 @@ function App() {
         </div>
       </div>
       
-      <footer className="mt-auto pt-6 text-sm text-gray-500 text-center">
-        Meeting App by Anantdv
-      </footer>
+      <div className="w-full max-w-sm mx-auto px-4">
+        <div className="border-t border-gray-200 pt-4 text-center">
+          <p className="text-sm text-gray-500">
+            Meeting App by Anant
+          </p>
+        </div>
+      </div>
     </div>
   )
 }
